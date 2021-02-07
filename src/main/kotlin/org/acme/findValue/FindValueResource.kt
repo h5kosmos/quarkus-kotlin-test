@@ -9,8 +9,8 @@ class FindValueResource(@Inject private val findValue: FindValue) {
 
 
     @GET
-    fun getCountAllFiles(): MutableSet<File> {
-        return findValue.getAllFiles()
+    fun getCountAllFiles(): MutableSet<String> {
+        return findValue.getAllFilesNames()
     }
 
 

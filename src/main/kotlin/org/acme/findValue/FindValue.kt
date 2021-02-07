@@ -25,6 +25,15 @@ class FindValue (@Inject private val config: Config) {
         return result
     }
 
+    fun getAllFilesNames(): MutableSet<String> {
+        val names: MutableSet<String> = mutableSetOf()
+        val dir = getAllFiles()
+        dir.forEach { f ->
+            names.add(f.name)
+        }
+        return names
+    }
+
     fun findValueInFile(file:File, value:String): Boolean {
         val regex: Regex = "\\b$value\\b".toRegex()
         return file.readText().contains(regex)
