@@ -1,4 +1,4 @@
-package org.acme.legume
+package test.project.legume
 
 import javax.ws.rs.Consumes
 import javax.ws.rs.Path
@@ -14,8 +14,10 @@ import javax.ws.rs.core.Response
 @Consumes(MediaType.APPLICATION_JSON)
 class LegumeResource {
 
-    private val legumes = mutableSetOf(Legume("Carrot", "Root vegetable, usually orange"),
-        Legume("Zucchini", "Summer squash"))
+    private val legumes = mutableSetOf(
+        Legume("Carrot", "Root vegetable, usually orange"),
+        Legume("Zucchini", "Summer squash")
+    )
 
     @GET
     fun list(): Response? {

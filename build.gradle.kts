@@ -23,6 +23,10 @@ dependencies {
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-resteasy-jackson")
     implementation (enforcedPlatform("io.quarkus:quarkus-bom:1.11.0.Final"))
+    implementation("io.quarkus:quarkus-hibernate-orm-panache-kotlin-deployment:1.11.2.Final")
+    implementation("io.quarkus:quarkus-agroal:1.11.1.Final")
+    implementation("org.postgresql:postgresql:42.2.18")
+    implementation("io.quarkus:quarkus-hibernate-orm-panache-kotlin")
 
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")

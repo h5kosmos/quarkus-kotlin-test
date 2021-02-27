@@ -1,4 +1,4 @@
-package org.acme
+package test.project
 
 import io.quarkus.test.junit.NativeImageTest
 

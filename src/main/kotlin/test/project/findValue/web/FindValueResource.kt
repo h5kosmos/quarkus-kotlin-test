@@ -1,6 +1,6 @@
-package org.acme.findValue
+package test.project.findValue.web
 
-import java.io.File
+import test.project.findValue.models.FindValue
 import javax.inject.Inject
 import javax.ws.rs.*
 
@@ -13,10 +13,22 @@ class FindValueResource(@Inject private val findValue: FindValue) {
         return findValue.getAllFilesNames()
     }
 
+    @POST
+    @Path("/hello/{value}")
+    fun findValueInFile(@PathParam("value") value: String): MutableSet<String> {
+        return findValue.findValueInFiles(value)
+    }
 
     @POST
     @Path("/{value}")
     fun findValue(@PathParam("value") value: String): MutableSet<String>{
         return findValue.findFilesWithValue(value)
     }
+
+    @POST
+    @Path("/parseFile/{filename}")
+    fun parseFile(@PathParam("filename") filename: String){
+        findValue.parseFileToDb(filename)
+    }
+
 }
