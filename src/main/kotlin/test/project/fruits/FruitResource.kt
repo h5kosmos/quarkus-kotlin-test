@@ -1,4 +1,4 @@
-package org.acme.fruits
+package test.project.fruits
 
 import java.util.function.Predicate
 import javax.ws.rs.*

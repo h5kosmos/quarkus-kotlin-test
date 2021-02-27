@@ -1,4 +1,4 @@
-package org.acme
+package test.project
 
 import io.vertx.core.http.HttpServerRequest
 import org.jboss.logging.Logger
